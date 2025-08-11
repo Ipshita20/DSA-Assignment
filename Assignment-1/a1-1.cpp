@@ -45,7 +45,7 @@ void insertElement()
         return;
     }
     int pos, val;
-    cout << "Enter position to insert (1 to " << n + 1 << "): ";
+    cout << "Enter position to insert: ";
     cin >> pos;
     if (pos < 1 || pos > n + 1) 
 	{
@@ -71,7 +71,7 @@ void deleteElement()
         return;
     }
     int pos;
-    cout << "Enter position to delete (1 to " << n << "): ";
+    cout << "Enter position to delete: ";
     cin >> pos;
     if (pos < 1 || pos > n) 
 	{
@@ -139,4 +139,5 @@ int main()
         }
     }
 }
+
 
