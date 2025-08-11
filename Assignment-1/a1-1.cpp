@@ -10,24 +10,28 @@ void createArray()
  {
     cout << "Enter number of elements: ";
     cin >> n;
-    if (n > MAX) {
+    if (n > MAX) 
+	{
         cout << "Max limit is " << MAX << ". Creating array with " << MAX << " elements.\n";
         n = MAX;
     }
     cout << "Enter " << n << " elements: ";
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+	{
         cin >> arr[i];
     }
 }
 
 void displayArray() 
 {
-    if (n == 0) {
+    if (n == 0)
+	{
         cout << "Array is empty!\n";
         return;
     }
     cout << "Array elements: ";
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+	{
         cout << arr[i] << " ";
     }
     cout << endl;
@@ -35,20 +39,23 @@ void displayArray()
 
 void insertElement()
  {
-    if (n == MAX) {
+    if (n == MAX) 
+	{
         cout << "Array is full! Cannot insert.\n";
         return;
     }
     int pos, val;
     cout << "Enter position to insert (1 to " << n + 1 << "): ";
     cin >> pos;
-    if (pos < 1 || pos > n + 1) {
+    if (pos < 1 || pos > n + 1) 
+	{
         cout << "Invalid position!\n";
         return;
     }
     cout << "Enter value: ";
     cin >> val;
-    for (int i = n; i >= pos; i--) {
+    for (int i = n; i >= pos; i--)
+		{
         arr[i] = arr[i - 1];
     }
     arr[pos - 1] = val;
@@ -58,18 +65,21 @@ void insertElement()
 
 void deleteElement()
  {
-    if (n == 0) {
+    if (n == 0) 
+	{
         cout << "Array is empty! Cannot delete.\n";
         return;
     }
     int pos;
     cout << "Enter position to delete (1 to " << n << "): ";
     cin >> pos;
-    if (pos < 1 || pos > n) {
+    if (pos < 1 || pos > n) 
+	{
         cout << "Invalid position!\n";
         return;
     }
-    for (int i = pos - 1; i < n - 1; i++) {
+    for (int i = pos - 1; i < n - 1; i++) 
+	{
         arr[i] = arr[i + 1];
     }
     n--;
@@ -78,15 +88,18 @@ void deleteElement()
 
 void linearSearch()
  {
-    if (n == 0) {
+    if (n == 0) 
+	{
         cout << "Array is empty!\n";
         return;
     }
     int key;
     cout << "Enter element to search: ";
     cin >> key;
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == key) {
+    for (int i = 0; i < n; i++) 
+	{
+        if (arr[i] == key)
+		{
             cout << "Element found at position " << i + 1 << ".\n";
             return;
         }
@@ -94,7 +107,8 @@ void linearSearch()
     cout << "Element not found.\n";
 }
 
-int main() {
+int main()
+{
     int choice;
     while (true) 
 	{
@@ -125,3 +139,4 @@ int main() {
         }
     }
 }
+
