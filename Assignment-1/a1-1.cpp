@@ -93,12 +93,12 @@ void linearSearch()
         cout << "Array is empty!\n";
         return;
     }
-    int key;
+    int k;
     cout << "Enter element to search: ";
-    cin >> key;
+    cin >> k;
     for (int i = 0; i < n; i++) 
 	{
-        if (arr[i] == key)
+        if (arr[i] == k)
 		{
             cout << "Element found at position " << i + 1 << ".\n";
             return;
