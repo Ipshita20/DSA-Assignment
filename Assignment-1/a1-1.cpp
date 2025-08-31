@@ -9,12 +9,7 @@ int n = 0;
 void createArray()
  {
     cout << "Enter number of elements: ";
-    cin >> n;
-    if (n > MAX) 
-	{
-        cout << "Max limit is " << MAX << ". Creating array with " << MAX << " elements.\n";
-        n = MAX;
-    }
+    cin >> n;
     cout << "Enter " << n << " elements: ";
     for (int i = 0; i < n; i++) 
 	{
