@@ -10,7 +10,6 @@ void createArray()
  {
     cout << "Enter number of elements: ";
     cin >> n;
-    cout << "Enter " << n << " elements: ";
     for (int i = 0; i < n; i++) 
 	{
         cin >> arr[i];
