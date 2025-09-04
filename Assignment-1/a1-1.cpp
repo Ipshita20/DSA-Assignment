@@ -106,7 +106,7 @@ int main()
     int choice;
     while (true) 
 	{
-        cout << "\n---- MENU ----\n";
+        cout << "\nMENU\n";
         cout << "1. CREATE\n";
         cout << "2. DISPLAY\n";
         cout << "3. INSERT\n";
@@ -116,7 +116,7 @@ int main()
         cout << "Enter your choice: ";
         cin >> choice;
 
-        switch (choice) {
+        switch (choice){
             case 1: createArray(); 
 			break;
             case 2: displayArray(); 
