@@ -1,14 +1,12 @@
 #include<iostream>
-using namespace std;
-
+using namespace std;
 int main() 
 {
-    int arr[100], n;
+    int arr[100],n;
     cout << "Enter number of elements: ";
-    cin >> n;
-
+    cin >> n;
     cout << "Enter " << n << " elements: ";
-    for (int i = 0; i < n; i++) {
+    for (int i=0; i<n; i++) {
         cin >> arr[i];
     }
 
