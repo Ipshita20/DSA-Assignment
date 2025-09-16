@@ -20,7 +20,7 @@ public:
             return;
         }
         if (front==-1) 
-        front = 0;
+        front=0;
         arr[++rear]=x;
     }
     int dequeue() {
@@ -47,7 +47,8 @@ public:
             q1.enqueue(x);
             while (!q2.isEmpty())
                 q1.enqueue(q2.dequeue());
-        } else {
+        }
+        else {
             q2.enqueue(x);
             while (!q1.isEmpty())
                 q2.enqueue(q1.dequeue());
@@ -69,7 +70,7 @@ int main() {
     s.push(10);
     s.push(20);
     s.push(30);
-    cout << s.pop() << endl; 
-    cout << s.pop() << endl; 
-    cout << s.pop() << endl;
+    cout<<s.pop()<<endl; 
+    cout<<s.pop()<<endl; 
+    cout<<s.pop()<<endl;
 }
