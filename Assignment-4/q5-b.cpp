@@ -10,10 +10,9 @@ public:
          front=-1;
           rear=-1; 
     }
-
     bool isEmpty() 
     { 
-        return (front == -1); 
+        return (front==-1); 
     }
     int size() 
     {
