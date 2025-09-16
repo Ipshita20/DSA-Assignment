@@ -37,7 +37,6 @@ public:
                 count++;
                 Node* toDelete=temp;
                 temp = temp->next;   
-
                 if (prev == NULL) {  
                     head = temp;
                 } else {
@@ -53,7 +52,8 @@ public:
     }
     void printList() {
         Node* temp=head;
-        while (temp) {
+        while (temp) 
+        {
             cout<<temp->data<<" ";
             temp=temp->next;
         }
@@ -78,3 +78,4 @@ int main() {
     list.printList();
     return 0;
 }
+
