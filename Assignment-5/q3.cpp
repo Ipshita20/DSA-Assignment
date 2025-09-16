@@ -1,56 +1,50 @@
 #include<iostream>
 using namespace std;
-class Node {
+class Node{
 public:
     int data;
     Node* next;
-    Node(int val) {
+    Node(int val){
         data=val;
-        next=nullptr;
+        next=NULL;
     }
 };
-class LinkedList {
-private:
-    Node* head;
+class LinkedList{
 public:
-    LinkedList() {
-        head=nullptr;
+    Node* head;
+    LinkedList(){
+        head=NULL;
     }
-    void insert(int val) {
+    void insert(int val){
         Node* newNode=new Node(val);
-        if (!head) {
+        if(head==NULL)
             head=newNode;
-            return;
+        else{
+            Node* temp=head;
+            while(temp->next!=NULL)
+                temp=temp->next;
+            temp->next=newNode;
         }
-        Node* temp=head;
-        while (temp->next) {
-            temp=temp->next;
-        }
-        temp->next=newNode;
     }
-    int findMiddle() {
-        if (!head) {
-            cout<<"List is empty!"<<endl;
-            return -1;
-        }
+    void findMiddle(){
         Node* slow=head;
         Node* fast=head;
-        while (fast != nullptr && fast->next != nullptr) {
-            slow=slow->next;        
-            fast=fast->next->next;  
+        while(fast!=NULL && fast->next!=NULL){
+            slow=slow->next;
+            fast=fast->next->next;
         }
-        return slow->data;
+        cout<<"Middle element is "<<slow->data<<endl;
     }
-    void printList() {
+    void display(){
         Node* temp=head;
-        while (temp) {
+        while(temp!=NULL){
             cout<<temp->data<<" ";
             temp=temp->next;
         }
         cout<<endl;
     }
 };
-int main() {
+int main(){
     LinkedList list;
     list.insert(1);
     list.insert(2);
@@ -58,7 +52,8 @@ int main() {
     list.insert(4);
     list.insert(5);
     cout<<"Linked List: ";
-    list.printList();
-    cout<<"Middle Element: "<<list.findMiddle()<<endl;
+    list.display();
+    list.findMiddle();
     return 0;
 }
+
