@@ -66,70 +66,6 @@ public:
         return n;
     }
 };
-class MinPQ{
-    int arr[100];
-    int n;
-    void heapifyUp(int i){
-        while(i>0){
-            int parent=(i-1)/2;
-            if(arr[parent]>arr[i]){
-                int temp=arr[parent];
-                arr[parent]=arr[i];
-                arr[i]=temp;
-                i=parent;
-            }else
-                break;
-        }
-    }
-    void heapifyDown(int i){
-        while(true){
-            int left=2*i+1;
-            int right=2*i+2;
-            int smallest=i;
-            if(left<n&&arr[left]<arr[smallest])
-                smallest=left;
-            if(right<n&&arr[right]<arr[smallest])
-                smallest=right;
-            if(smallest==i)
-                break;
-            int temp=arr[i];
-            arr[i]=arr[smallest];
-            arr[smallest]=temp;
-            i=smallest;
-        }
-    }
-public:
-    MinPQ(){
-        n=0;
-    }
-    void push(int x){
-        arr[n]=x;
-        n++;
-        heapifyUp(n-1);
-    }
-    void pop(){
-        if(n==0){
-            cout<<"Queue is empty"<<endl;
-            return;
-        }
-        arr[0]=arr[n-1];
-        n--;
-        heapifyDown(0);
-    }
-    int top(){
-        if(n==0){
-            cout<<"Queue is empty"<<endl;
-            return -1;
-        }
-        return arr[0];
-    }
-    bool empty(){
-        return n==0;
-    }
-    int size(){
-        return n;
-    }
-};
 int main(){
     MaxPQ maxpq;
     MinPQ minpq;
@@ -153,3 +89,4 @@ int main(){
     cout<<endl;
     return 0;
 }
+
