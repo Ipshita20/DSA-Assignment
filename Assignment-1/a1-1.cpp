@@ -9,7 +9,8 @@ int n = 0;
 void createArray()
  {
     cout << "Enter number of elements: ";
-    cin >> n;
+    cin >> n;
+
     for (int i = 0; i < n; i++) 
 	{
         cin >> arr[i];
